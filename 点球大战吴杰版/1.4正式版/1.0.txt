@@ -1,0 +1,21 @@
+Dim x As Integer
+Private Sub Command1_Click()
+Timer1.Enabled = True
+x = -100
+End Sub
+
+Private Sub Command2_Click()
+Timer1.Enabled = True
+x = 100
+End Sub
+
+Private Sub Timer1_Timer()
+If Image3.Left > 3100 And Image3.Left < 6720 Then
+    Image3.Left = Image3.Left + x
+    Image3.Top = Image3.Top - 100
+Else
+    Image3.Left = 5040
+    Image3.Top = 4440
+    Timer1.Enabled = False
+End If
+End Sub
